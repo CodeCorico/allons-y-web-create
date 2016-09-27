@@ -1,0 +1,29 @@
+<div class="web-create-layout {{teardown ? 'teardown' : ''}}">
+  <rv-require name="pl-scrolls" src="/public/vendor/plumes/scrolls/pl-scrolls"></rv-require>
+
+  <div class="pl-scrolls">
+    {{#if !sections.length}}
+      <section class="web-create-layout-section">
+        <h1>{{_('No template found.')}}</h1>
+      </section>
+    {{/if}}
+
+    {{#sections}}
+      <section class="web-create-layout-section">
+        <h1>{{_(title)}}</h1>
+
+        <div class="web-create-layout-links">
+          {{#links}}
+            <a class="web-create-layout-link" href="{{url}}">
+              <img src="{{image || '/public/web-create/web-create-thumb.png'}}" />
+              <h2>{{_(title)}}</h2>
+              <p>{{_(description)}}</p>
+            </a>
+          {{/links}}
+
+          <div class="clear"></div>
+        </div>
+      </section>
+    {{/sections}}
+  </div>
+</div>
