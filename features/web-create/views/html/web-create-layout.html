@@ -14,7 +14,7 @@
 
         <div class="web-create-layout-links">
           {{#links}}
-            <a class="web-create-layout-link" href="{{url}}">
+            <a class="web-create-layout-link" href="{{url}}" on-click="linkOpened">
               <img src="{{image || '/public/web-create/web-create-thumb.png'}}" />
               <h2>{{_(title)}}</h2>
               <p>{{_(description)}}</p>
