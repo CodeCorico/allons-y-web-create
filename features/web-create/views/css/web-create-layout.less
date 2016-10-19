@@ -12,6 +12,12 @@
 @-o-keyframes web-create-section-links { 0% { opacity: 0; .transform(translateX(-10rem)); } 30% { opacity: 0; .transform(translateX(-10rem)); } 100% { opacity: 1; .transform(translateX(0)); } }
 @keyframes web-create-section-links { 0% { opacity: 0; .transform(translateX(-10rem)); } 30% { opacity: 0; .transform(translateX(-10rem)); } 100% { opacity: 1; .transform(translateX(0)); } }
 
+@-webkit-keyframes web-create-noresult-show { 0% { opacity: 0; margin-top: 6rem; } 100% { opacity: 1; margin-top: -4rem; } }
+@-moz-keyframes web-create-noresult-show { 0% { opacity: 0; margin-top: 6rem; } 100% { opacity: 1; margin-top: -4rem; } }
+@-ms-keyframes web-create-noresult-show { 0% { opacity: 0; margin-top: 6rem; } 100% { opacity: 1; margin-top: -4rem; } }
+@-o-keyframes web-create-noresult-show { 0% { opacity: 0; margin-top: 6rem; } 100% { opacity: 1; margin-top: -4rem; } }
+@keyframes web-create-noresult-show { 0% { opacity: 0; margin-top: 6rem; } 100% { opacity: 1; margin-top: -4rem; } }
+
 .web-create-layout {
   position: absolute;
   top: 0;
@@ -88,6 +94,42 @@
       }
     }
 
+  }
+
+  .web-create-layout-noresult {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    .transform(translateY(-50%));
+    padding: 2rem;
+    text-align: center;
+    margin-top: -4rem;
+    .animation(web-create-noresult-show 0.55s);
+
+    img {
+      background: @accentColor;
+      width: 214px;
+      max-width: 90%;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      .no-animation();
+    }
+
+    p {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    a, a:hover, a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
 }

@@ -3,8 +3,12 @@
 
   <div class="pl-scrolls">
     {{#if !sections.length}}
-      <section class="web-create-layout-section">
+      <section class="web-create-layout-section web-create-layout-noresult">
+        <img src="/public/web-create/web-create-hero.png" />
         <h1>{{_('No template found.')}}</h1>
+        <p>
+          {{_('To create some content, you first need to join')}} <a href="/groups">{{_('a group')}}</a> {{_('with creating powers, or ask your administrator for more')}} <a href="http://allons-y.io" target="_blank">{{_('Allons-y apps')}}</a>.
+        </p>
       </section>
     {{/if}}
 
