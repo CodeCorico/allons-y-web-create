@@ -7,7 +7,9 @@
     $RealTimeService, $component, $data, $done
   ) {
     var WebCreateLayout = $component({
-      data: $data
+      data: $.extend(true, {
+        loaded: false
+      }, $data)
     });
 
     function _createCookie(newCookieData) {
@@ -60,6 +62,8 @@
     $RealTimeService.realtimeComponent('webCreate', {
       name: 'web-create-links',
       update: function(event, args) {
+        WebCreateLayout.set('loaded', true);
+
         if (!WebCreateLayout || !args) {
           return;
         }
